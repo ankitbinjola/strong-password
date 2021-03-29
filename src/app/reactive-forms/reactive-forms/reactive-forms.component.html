@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>Angular Radio Button Example - ItSolutionStuff.com</h1>
+         
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+            
+        <div class="form-group">
+
+            
+            <label for="name">name</label>
+            <div>
+              <input id="name" type="text" name="gender" formControlName="name" required>
+              <div *ngIf="f.name.invalid && (f.name.touched || f.name.dirty)" class="alert alert-danger">
+                <div>Name is required.</div>
+            </div>
+              <!-- <label for="name">Male</label> -->
+           </div>
+
+
+            <label for="gender">Gender:</label>
+            <div>
+              <input id="male" type="radio" value="male" name="gender" formControlName="gender" (change)="changeGender($event)">
+              <label for="male">Male</label>
+           </div>
+   
+           <div>
+              <input id="female" type="radio" value="female" name="gender" formControlName="gender" (change)="changeGender($event)">
+              <label for="female">Female</label>
+           </div>
+               
+            <div *ngIf="f.gender.invalid" class="alert alert-danger">
+                <div>Name is required.</div>
+            </div>
+        </div>
+         
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>
+    </form>
+</div>

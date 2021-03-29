@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col mt-5 col-xs-6 col-md-6 col-lg-6">
+          <h2>Password Strength</h2>
+          <br>
+        <form [formGroup]="passwordform">
+          <div class="form-group">
+            <input type="text" class="form-control" formControlName="password" autocomplete="off" placeholder="Password">
+            <app-child-component
+            [passwordCheck]="passwordform.value.password"
+            (Strength)="passwordValid($event)"
+            ></app-child-component>
+          </div>     
+        </form>
+        </div>
+    </div>
+</div>

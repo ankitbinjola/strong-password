@@ -1,0 +1,17 @@
+<div class="strength">
+    <ul class="barlength">
+      <li class="checker" [style.background-color]="length0"></li>
+      <li class="checker" [style.background-color]="length1"></li>
+      <li class="checker" [style.background-color]="length2"></li>
+      <li class="checker" [style.background-color]="length3"></li>
+    </ul>
+    <br>
+    <ul>
+      <li *ngIf="!(lowercaseError == 'lowercase')">lowercase {{lowercaseError}}</li>
+      <li *ngIf="!(upperLettersError == 'upperLetters')">include uppercase {{upperLettersError}}</li>
+      <li *ngIf="!(numbersError == 'numbers')" >include numbers</li>
+      <li *ngIf="!(symbolsError == 'symbols')">include includes upper and lower case</li>
+      <li *ngIf="!(eightcharError == 'eightchar')">greater then eight char</li>
+    </ul>
+    <p style="font-size: 15px;">{{message}}</p>
+  </div>

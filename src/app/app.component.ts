@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'strong-password-popup';
+
+    itrate = [1,2,3]
+
 }
